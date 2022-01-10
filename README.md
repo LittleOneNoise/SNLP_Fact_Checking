@@ -22,3 +22,34 @@ This priority was used when we built the local database. If you pay attention yo
 
 `2. Sentence: Nobel Prize in Physics is Albert Einstein's award.`
 > -> Main information list: ['Albert Einstein', 'Nobel Prize in Physics'], category: award, synonym of category that exists in other facts as a category: honour
+
+## Proccess strategy
+The engine uses **2 resources as reference**: Firstly it checks the local database which was built by using the train dataset, then it uses the wikipedia in order to check the fact online.<br/>
+
+* Fact analysis in local database
+
+> Engine seek each fact in the local database according to the common words (which we call them categories). If category or synonym of category matches it will check how many matches in the main information lists. Then the following 
+procedure will be applied:
+-> If number of matches will be 2, and since category match was confirmed, fact from the test dataset will take the label of the fact from the train dataset. 
+-> If number of matches will be 1, and since category match was confirmed, specific fact (e.g., Albert Einstein) will be seek in the main information list of fact from the test dataset. In this case:
+----> if it does not exist there it means generic information is the reason of one match. That will lead us to not rely on that information.
+----> if it exists there, we will check the label of the fact from the train dataset. In this case we will rely only on the label of True in order to label our test fact as False. Otherwise we will not rely on this fact matching, 
+since train fact has False label. These non-reliable facts will be sent to the wikipedia fact checking section.
+
+* Fact analysis on Wikipedia
+
+> Wikipedia search uses not only wikipedia library itself, but also beautifulsoup that handles web-scrapping tasks. First we look for corresponding link by using the wikipedia library. As a result, wikipedia library provides list of 
+links that correspond to each main information which are included by sentence. Using this methodology will prevent the engine to crash because of Disambiguation or PageError. Using these links in implementation of beautifulsoup 
+library we extracts not only tables from the relevant pages, but also texts. Then we implement OR conditioning such as: 
+if both (table checking and text checking) returns True the fact will be labelled as True,
+if one of them returns True the fact will be labelled as True as well,
+if both return False the fact will be labelled as False.
+
+## Executing the Project
+In order to execute the given fact_engine.ipynb apply the following steps:
+
+1. Download the zip folder from the Github repository
+2. Extract all files to one folder
+3. upload the extracted folder to "My Drive" folder in your Google Drive
+4. open the fact_engine.ipynb, which is in the folder that you uploaded, by double clicking on it
+5. choose Runtime from the menu above and 'Run all'

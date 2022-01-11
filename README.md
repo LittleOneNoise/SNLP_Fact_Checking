@@ -3,6 +3,9 @@ A corpus-driven fact-checking engine, which returns a confidence value between 0
 
 ## Approach/Data preparation
 We used the train dataset in order to build the main skeleton of the engine. In order to do this, we retrieved all the information from the given raw sentence and collected related information in dictionary of dictionaries (corresponding to the each fact).
+We also analyzed the distribution of categories among the test dataset and generated charts (bar graphs) to illustrate it:
+<img src="https://github.com/LittleOneNoise/SNLP_Fact_Checking/blob/73169367f6a24f5e6cb95896b12bd29851bdeafb/Images/distrib_cat_train.jpeg">
+<img src="https://github.com/LittleOneNoise/SNLP_Fact_Checking/blob/73169367f6a24f5e6cb95896b12bd29851bdeafb/Images/distrib_cat_test.jpeg">
 As a result we ended up with the following structure for a sentence that includes the main information that is used for the fact checking.<br/><br/>
 Since there are **three types** of sentence structure we handled them with different scenarios:<br/><br/>
 `1. Sentence: Albert Einstein's honour is Nobel Prize in Physics.`<br/>
@@ -23,7 +26,7 @@ This priority was used when we built the local database. If you pay attention yo
 `2. Sentence: Nobel Prize in Physics is Albert Einstein's award.`
 > -> Main information list: ['Albert Einstein', 'Nobel Prize in Physics'], category: award, synonym of category that exists in other facts as a category: honour
 
-## Proccess strategy
+## Process strategy
 The engine uses **2 resources as reference**: Firstly it checks the local database which was built by using the train dataset, then it uses the wikipedia in order to check the fact online.<br/>
 
 * Fact analysis in local database
@@ -44,6 +47,12 @@ library we extracts not only tables from the relevant pages, but also texts. The
 if both (table checking and text checking) returns True the fact will be labelled as True,
 if one of them returns True the fact will be labelled as True as well,
 if both return False the fact will be labelled as False.
+
+## Results
+After labelling all the facts from the test dataset, we got the following numbers:<br/>
+`657/1342 True Labels and 685/1342 False Labels`
+
+In order to have an idea about the efficiency of our engine, before labelling test sentences by using web scrapping, we generated a sample from test dataset which were labelled according to the train database (i.e., local database). Since those labels are reliable, we computed accuracy of the generated sample set which includes 145 sentences. As a result we get `94.48 % accuracy`. Even though it is not a huge amount of facts, the accuracy we got was a good news concerning the efficiency of our system.
 
 ## Executing the Project
 In order to execute the given fact_engine.ipynb apply the following steps:

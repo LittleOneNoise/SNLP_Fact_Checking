@@ -4,8 +4,8 @@ A corpus-driven fact-checking engine, which returns a confidence value between 0
 ## Approach/Data preparation
 We used the train dataset in order to build the main skeleton of the engine. In order to do this, we retrieved all the information from the given raw sentence and collected related information in dictionary of dictionaries (corresponding to the each fact).
 We also analyzed the distribution of categories among the test dataset and generated charts (bar graphs) to illustrate it:
-<img src="https://github.com/LittleOneNoise/SNLP_Fact_Checking/blob/73169367f6a24f5e6cb95896b12bd29851bdeafb/Images/distrib_cat_train.jpeg">
-<img src="https://github.com/LittleOneNoise/SNLP_Fact_Checking/blob/73169367f6a24f5e6cb95896b12bd29851bdeafb/Images/distrib_cat_test.jpeg"><br/>
+<img src="https://github.com/LittleOneNoise/SNLP_Fact_Checking/blob/73169367f6a24f5e6cb95896b12bd29851bdeafb/Images/distrib_cat_train.jpeg" width="400">
+<img src="https://github.com/LittleOneNoise/SNLP_Fact_Checking/blob/73169367f6a24f5e6cb95896b12bd29851bdeafb/Images/distrib_cat_test.jpeg" width="400"><br/>
 As a result we ended up with the following structure for a sentence that includes the main information that is used for the fact checking.<br/><br/>
 Since there are **three types** of sentence structure we handled them with different scenarios:<br/><br/>
 `1. Sentence: Albert Einstein's honour is Nobel Prize in Physics.`<br/>

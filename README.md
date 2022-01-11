@@ -59,20 +59,23 @@ At the end, we performed labelling of the test dataset by using, not only online
 `657/1342 True Labels and 685/1342 False Labels`
 
 ## Used libraries
-* wikipedia
-* spacy
-* Beautifulsoup (bs4)
-* urllib
-* json
-* tqdm (tqdm.notebook)
-* csv
+* drive (from google.colab)<br/>
+
+* tqdm (from tqdm.notebook)
 * os
-* unicodedata
-* drive (google.colab)
-* HTTPError (urllib.error)
-* urlopen (urllib.request)
+* json
+* csv
 * re
-* collection
+* Counter (from collections)
+* spacy
+* matplotlib.pyplot
+
+* unicodedata
+* wikipedia
+* urllib.request
+* urlopen (from urllib.request)
+* rHTTPError (from urllib.error)
+* BeautifulSoup (from bs4)
 
 ## Executing the Project
 In order to execute the given fact_engine.ipynb apply the following steps:
@@ -82,3 +85,7 @@ In order to execute the given fact_engine.ipynb apply the following steps:
 3. upload the extracted folder to "My Drive" folder in your Google Drive
 4. open the fact_engine.ipynb, which is in the folder that you uploaded, by double clicking on it
 5. choose Runtime from the menu above and 'Run all'
+
+**Team Name:** Siktir gang
+
+**Team Members**: nobody

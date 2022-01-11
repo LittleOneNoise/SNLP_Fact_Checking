@@ -74,7 +74,7 @@ At the end, we performed labelling of the test dataset by using, not only online
 * wikipedia
 * urllib.request
 * urlopen (from urllib.request)
-* rHTTPError (from urllib.error)
+* HTTPError (from urllib.error)
 * BeautifulSoup (from bs4)
 
 ## Executing the Project

@@ -1,6 +1,14 @@
 # SNLP Fact Checking
 A corpus-driven fact-checking engine, which returns a confidence value between 0 (fact is false) and 1 (fact is true) given a fact
 
+## Table of contents
+* Approach/Data preparation
+* Process strategy
+* Results
+* Used libraries
+* Executing the Project
+* Team information
+
 ## Approach/Data preparation
 We used the train dataset in order to build the main skeleton of the engine. In order to do this, we retrieved all the information from the given raw sentence and collected related information in dictionary of dictionaries (corresponding to the each fact).
 We also analyzed the distribution of categories among the test dataset and generated charts (bar graphs) to illustrate it:<br/>
@@ -86,6 +94,10 @@ In order to execute the given fact_engine.ipynb apply the following steps:
 4. open the fact_engine.ipynb, which is in the folder that you uploaded, by double clicking on it
 5. choose Runtime from the menu above and 'Run all'
 
-**Team Name:** Siktir gang
+## Team information
+**Team Name:** ErasmusVog
 
-**Team Members**: nobody
+**Team Members**:<br/>
+- NAMAZOV Mahammad
+- CONSTANT Nathanaël
+- BEGINO Sofi

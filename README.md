@@ -86,8 +86,10 @@ At the end, we performed labelling of the test dataset by using, not only online
 * BeautifulSoup (from bs4)
 
 ## Executing the Project
-In order to execute the given fact_engine.ipynb apply the following steps:
+In order to execute the given fact_engine.ipynb apply the following steps:<br/>
+
 NOTE: You must be connected to the internet!
+
 1. Download the zip folder from the Github repository
 2. Extract all files to one folder
 3. upload the extracted folder to "My Drive" folder in your Google Drive

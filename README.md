@@ -58,6 +58,21 @@ The result that is described below was obtained by following the steps given abo
 At the end, we performed labelling of the test dataset by using, not only online fact checking (only web-scrapping, but not accuracy computation since we don't have true values for all data in the test dataset), but also local database matching. After labelling all the facts from the test dataset, we got the following numbers:<br/>
 `657/1342 True Labels and 685/1342 False Labels`
 
+## Used libraries
+* wikipedia
+* spacy
+* Beautifulsoup (bs4)
+* urllib
+* json
+* tqdm (tqdm.notebook)
+* csv
+* os
+* unicodedata
+* drive (google.colab)
+* HTTPError (urllib.error)
+* urlopen (urllib.request)
+* re
+* collection
 
 ## Executing the Project
 In order to execute the given fact_engine.ipynb apply the following steps:

@@ -46,7 +46,7 @@ The engine uses **2 resources as reference**: Firstly it checks the local databa
 
 ## Results
 We measured the accuracy of our web scrapping on the train datatset and the following result was obtained:
-`True: 622/1234; False: 612/1234; False positive:  63/1234; False negative: 2/1234; Same as original: 1169/1234; Accuracy: 0.9473`
+`True: 622/1234; False: 612/1234; False positive:  2/1234; False negative: 63/1234; Same as original: 1169/1234; Accuracy: 0.9473`
 
 After labelling all the facts from the test dataset, we got the following numbers:<br/>
 `657/1342 True Labels and 685/1342 False Labels`

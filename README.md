@@ -17,7 +17,7 @@ Since there are **three types** of sentence structure we handled them with diffe
 `3. Sentence: Stars Nokia, Finland has been Nokiaed Nokia.`
 > -> Main information list: ['None', 'None'], category: stars, synonym does not exist
 
-???_Notice that in the information that was provided above not all information that each dictionary consist???_. The other information such as raw_sentence, splitted_sentence and the others were used for different purposes of building the skeleton. 
+Notice that the information showed above does not represent the complete data that is included for each element in the dictionary. The other information such as raw_sentence, splitted_sentence and the others were used for different purposes of building the skeleton.
 In order to explain the skeleton in detail, some important notes related with sentence structures must be given.
 
 Each sentence includes 2 different facts that we call specific fact and generic fact. In example 1 and 2 (given above) Albert Einstein is the specific information while Nobel Prize in Physics stands for generic information.

@@ -48,15 +48,16 @@ The engine uses **2 resources as reference**: Firstly it checks the local databa
 We measured the accuracy of our web scrapping on the train datatset and the following result was obtained:<br/>
 `True: 622/1234; False: 612/1234; False positive:  2/1234; False negative: 63/1234; Same as original: 1169/1234; Accuracy: 0.9473`
 
-After labelling all the facts from the test dataset, we got the following numbers:<br/>
-`657/1342 True Labels and 685/1342 False Labels`
-
 In order to have an idea about the accuracy of the engine on test dataset we performed the following actions:<br/>
 * Check whether a data from the test dataset can be labelled by using the local database (was built upon the train dataset) or not. If so, label the relevant data, otherwise keep it as none;
 * Collect the data that were labelled in the previous step, as a sampling dataset;
 * Use the sampling dataset in order to do web-scrapping for train dataset (i.e., check the fact online and compute accuracy).<br/>
 The result that is described below was obtained by following the steps given above:<br/>
 `True: 8/145; False: 137/145; False positive:  0/145; False negative: 8/145; Same as original: 137/145; Accuracy: 0.9448`
+
+At the end, we performed labelling of the test dataset by using, not only online fact checking (only web-scrapping, but not accuracy computation since we don't have true values for all data in the test dataset), but also local database matching. After labelling all the facts from the test dataset, we got the following numbers:<br/>
+`657/1342 True Labels and 685/1342 False Labels`
+
 
 ## Executing the Project
 In order to execute the given fact_engine.ipynb apply the following steps:

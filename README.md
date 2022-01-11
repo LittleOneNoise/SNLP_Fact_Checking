@@ -93,6 +93,7 @@ In order to execute the given fact_engine.ipynb apply the following steps:
 3. upload the extracted folder to "My Drive" folder in your Google Drive
 4. open the fact_engine.ipynb, which is in the folder that you uploaded, by double clicking on it
 5. choose Runtime from the menu above and 'Run all'
+6. you will be asked to grant access to your drive, you have to choose the account that in which Google Drive you uploaded the folder and allow access (because the system will read and write files in the folder)
 
 ## Team information
 **Team Name:** ErasmusVog

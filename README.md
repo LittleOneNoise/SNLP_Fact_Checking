@@ -54,6 +54,9 @@ After labelling all the facts from the test dataset, we got the following number
 
 In order to have an idea about the efficiency of our engine, before labelling test sentences by using web scrapping, we generated a sample from test dataset which were labelled according to the train database (i.e., local database). Since those labels are reliable, we computed accuracy of the generated sample set which includes 145 sentences. As a result we get `94.48 % accuracy`. Even though it is not a huge amount of facts, the accuracy we got was a good news concerning the efficiency of our system.
 
+We also measured the efficiency of our web scrapping on the train datatset and we got the following result:
+`True: 622/1234; False: 612/1234; Same as original: 1169/1234; Accuracy: 0.9473`
+
 ## Executing the Project
 In order to execute the given fact_engine.ipynb apply the following steps:
 

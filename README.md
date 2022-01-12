@@ -88,7 +88,7 @@ At the end, we performed labelling of the test dataset by using, not only online
 ## Executing the Project
 In order to execute the given fact_engine.ipynb apply the following steps:<br/>
 
-NOTE: You must be connected to the internet!
+NOTE: You must be connected to the internet! Additionally, execute the code in Google Colab. We do not guarantee that it can work on Jupyter Notebook or any other IDE for python.
 
 1. Download the zip folder from the Github repository
 2. Extract all files to one folder
@@ -96,6 +96,8 @@ NOTE: You must be connected to the internet!
 4. open the fact_engine.ipynb, which is in the folder that you uploaded, by double clicking on it
 5. choose Runtime from the menu above and 'Run all'
 6. you will be asked to grant access to your drive, you have to choose the account that in which Google Drive you uploaded the folder and allow access (because the system will read and write files in the folder)
+
+NOTE: Because of incompatibility of colab file with GitHub, some lines might not be seen well in the preview. In this case it would be better check the code in Google Colab itself.
 
 ## Team information
 **Team Name:** ErasmusVog
